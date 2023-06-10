@@ -5,7 +5,7 @@ module syn_FIFO #(
     parameter d_depth = 8
 ) (
     output isEmpty,
-    output isFull,
+    output reg isFull,
     output [d_width-1 : 0] r_data,
     input  [d_width-1 : 0] w_data,
     input  r_en,
@@ -15,7 +15,7 @@ module syn_FIFO #(
 );
 
 // FIFO is 8*8 here.
-reg [d_width -1 :0] fifo d [d_depth - 1 :0];
+reg [d_width -1 :0] fifo[d_depth - 1 :0];
 reg [$clog2(d_width): 0] w_ptr, r_ptr;
 
 
@@ -34,15 +34,29 @@ end
 // Wrtie Pointer 
 always @(posedge clk or negedge n_rst) begin
     if (!n_rst) w_ptr <= 0;
-    else if (w_en == 1'b1 && !isFull) w_ptr <= w_ptr + 1'b1;
+    else if (w_en == 1'b1 && !isFull) w_ptr <= {w_ptr[3], w_ptr[2:0] + 1'b1};
     else w_ptr <= w_ptr;
 end
 
 // Read Pointer 
 always @(posedge clk or negedge n_rst) begin
     if (!n_rst) r_ptr <= 0;
-    else if (r_en == 1'b1 && !isEmpty) r_ptr <= r_ptr + 1'b1;
+    else if (r_en == 1'b1 && !isEmpty) r_ptr <= {r_ptr[3], r_ptr[2:0] + 1'b1};
     else r_ptr <= r_ptr;
 end
+
+// Write
+always @(posedge clk or negedge n_rst) begin
+    if (w_en == 1'b1 && !isFull ) begin
+        fifo[w_ptr] <= w_data;
+    end
+    else begin
+        fifo[w_ptr] <= fifo[w_ptr];
+    end
+end
+
+// Read
+
+
     
 endmodule

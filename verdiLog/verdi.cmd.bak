@@ -1,0 +1,245 @@
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+verdiSetActWin -dock widgetDock_<Message>
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+verdiWindowResize -win $_Verdi_1 "510" "190" "900" "700"
+debLoadSimResult /home/che0514/sideProject/syn_FIFO/FIFO.fsdb
+wvSetCursor -win $_nWave2 2.720874
+wvSetOptions -win $_nWave2 -snap off
+wvSetOptions -win $_nWave2 -snap on
+wvZoomOut -win $_nWave2
+wvSetOptions -win $_nWave2 -fixedDelta on
+wvZoomOut -win $_nWave2
+wvSetOptions -win $_nWave2 -fixedDelta off
+wvSetCursor -win $_nWave2 23.761354
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/tb_FIFO"
+wvGetSignalSetScope -win $_nWave2 "/tb_FIFO/uut"
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_FIFO/uut/clk} \
+{/tb_FIFO/uut/isEmpty} \
+{/tb_FIFO/uut/isFull} \
+{/tb_FIFO/uut/n_rst} \
+{/tb_FIFO/uut/r_data\[7:0\]} \
+{/tb_FIFO/uut/r_en} \
+{/tb_FIFO/uut/r_ptr\[3:0\]} \
+{/tb_FIFO/uut/w_data\[7:0\]} \
+{/tb_FIFO/uut/w_en} \
+{/tb_FIFO/uut/w_ptr\[3:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 10 )} 
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_FIFO/uut/clk} \
+{/tb_FIFO/uut/isEmpty} \
+{/tb_FIFO/uut/isFull} \
+{/tb_FIFO/uut/n_rst} \
+{/tb_FIFO/uut/r_data\[7:0\]} \
+{/tb_FIFO/uut/r_en} \
+{/tb_FIFO/uut/r_ptr\[3:0\]} \
+{/tb_FIFO/uut/w_data\[7:0\]} \
+{/tb_FIFO/uut/w_en} \
+{/tb_FIFO/uut/w_ptr\[3:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 10 )} 
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvGetSignalClose -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 52.573742 -snap {("G1" 7)}
+verdiDockWidgetMaximize -dock windowDock_nWave_2
+wvSetCursor -win $_nWave2 63.380567 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvSetCursor -win $_nWave2 39.605552 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/tb_FIFO"
+wvGetSignalSetScope -win $_nWave2 "/tb_FIFO/uut"
+wvSetPosition -win $_nWave2 {("G1" 20)}
+wvSetPosition -win $_nWave2 {("G1" 20)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_FIFO/uut/clk} \
+{/tb_FIFO/uut/isEmpty} \
+{/tb_FIFO/uut/isFull} \
+{/tb_FIFO/uut/n_rst} \
+{/tb_FIFO/uut/r_data\[7:0\]} \
+{/tb_FIFO/uut/r_en} \
+{/tb_FIFO/uut/r_ptr\[3:0\]} \
+{/tb_FIFO/uut/w_data\[7:0\]} \
+{/tb_FIFO/uut/w_en} \
+{/tb_FIFO/uut/w_ptr\[3:0\]} \
+{/tb_FIFO/uut/clk} \
+{/tb_FIFO/uut/isEmpty} \
+{/tb_FIFO/uut/isFull} \
+{/tb_FIFO/uut/n_rst} \
+{/tb_FIFO/uut/r_data\[7:0\]} \
+{/tb_FIFO/uut/r_en} \
+{/tb_FIFO/uut/r_ptr\[3:0\]} \
+{/tb_FIFO/uut/w_data\[7:0\]} \
+{/tb_FIFO/uut/w_en} \
+{/tb_FIFO/uut/w_ptr\[3:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 11 12 13 14 15 16 17 18 19 20 )} 
+wvSetPosition -win $_nWave2 {("G1" 20)}
+wvSetPosition -win $_nWave2 {("G1" 20)}
+wvSetPosition -win $_nWave2 {("G1" 20)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_FIFO/uut/clk} \
+{/tb_FIFO/uut/isEmpty} \
+{/tb_FIFO/uut/isFull} \
+{/tb_FIFO/uut/n_rst} \
+{/tb_FIFO/uut/r_data\[7:0\]} \
+{/tb_FIFO/uut/r_en} \
+{/tb_FIFO/uut/r_ptr\[3:0\]} \
+{/tb_FIFO/uut/w_data\[7:0\]} \
+{/tb_FIFO/uut/w_en} \
+{/tb_FIFO/uut/w_ptr\[3:0\]} \
+{/tb_FIFO/uut/clk} \
+{/tb_FIFO/uut/isEmpty} \
+{/tb_FIFO/uut/isFull} \
+{/tb_FIFO/uut/n_rst} \
+{/tb_FIFO/uut/r_data\[7:0\]} \
+{/tb_FIFO/uut/r_en} \
+{/tb_FIFO/uut/r_ptr\[3:0\]} \
+{/tb_FIFO/uut/w_data\[7:0\]} \
+{/tb_FIFO/uut/w_en} \
+{/tb_FIFO/uut/w_ptr\[3:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 11 12 13 14 15 16 17 18 19 20 )} 
+wvSetPosition -win $_nWave2 {("G1" 20)}
+wvGetSignalClose -win $_nWave2
+wvSetCursor -win $_nWave2 40.481781 -snap {("G1" 14)}
+wvSetCursor -win $_nWave2 17.816657 -snap {("G1" 15)}
+wvSetCursor -win $_nWave2 16.356275 -snap {("G1" 15)}
+wvSelectSignal -win $_nWave2 {( "G1" 17 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 18 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 20 )} 
+wvSetCursor -win $_nWave2 21.672065 -snap {("G2" 0)}
+wvSelectGroup -win $_nWave2 {G1}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 \
+           18 19 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 \
+           18 19 20 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/tb_FIFO"
+wvGetSignalSetScope -win $_nWave2 "/tb_FIFO/uut"
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_FIFO/uut/clk} \
+{/tb_FIFO/uut/n_rst} \
+{/tb_FIFO/uut/r_ptr\[3:0\]} \
+{/tb_FIFO/uut/w_ptr\[3:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 )} 
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/tb_FIFO/uut/clk} \
+{/tb_FIFO/uut/n_rst} \
+{/tb_FIFO/uut/r_ptr\[3:0\]} \
+{/tb_FIFO/uut/w_ptr\[3:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 )} 
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvGetSignalClose -win $_nWave2
+wvSetCursor -win $_nWave2 35.574899 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 20.270098 -snap {("G1" 3)}
+wvSetCursor -win $_nWave2 12.384037 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 12.442452 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 29.757366 -snap {("G2" 0)}
+wvSetCursor -win $_nWave2 10.210861 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+verdiWindowResize -win $_Verdi_1 "2259" "122" "900" "700"
+wvSetCursor -win $_nWave2 38.509532 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 17.504333 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvSetCursor -win $_nWave2 21.606008 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
+wvSetCursor -win $_nWave2 12.767187 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave2 -off
+wvGetSignalClose -win $_nWave2
+wvReloadFile -win $_nWave2
