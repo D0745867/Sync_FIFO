@@ -34,7 +34,10 @@ end
 // Wrtie Pointer 
 always @(posedge clk or negedge n_rst) begin
     if (!n_rst) w_ptr <= 0;
-    else if (w_en == 1'b1 && !isFull) w_ptr <= {w_ptr[3], w_ptr[2:0] + 1'b1};
+    else if (w_en == 1'b1 && !isFull) begin
+        if(&w_ptr[2:0])  w_ptr <= {~w_ptr[3], w_ptr[2:0] + 1'b1};
+        else w_ptr <= {w_ptr[3], w_ptr[2:0] + 1'b1};
+    end
     else w_ptr <= w_ptr;
 end
 
