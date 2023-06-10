@@ -55,7 +55,7 @@ always @(posedge clk or negedge n_rst) begin
     end
 end
 
-// Read
+// Rea
 
 
     
