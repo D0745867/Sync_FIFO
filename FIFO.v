@@ -6,7 +6,7 @@ module syn_FIFO #(
 ) (
     output isEmpty,
     output reg isFull,
-    output [d_width-1 : 0] r_data,
+    output reg [d_width-1 : 0] r_data,
     input  [d_width-1 : 0] w_data,
     input  r_en,
     input  w_en,
@@ -44,7 +44,10 @@ end
 // Read Pointer 
 always @(posedge clk or negedge n_rst) begin
     if (!n_rst) r_ptr <= 0;
-    else if (r_en == 1'b1 && !isEmpty) r_ptr <= {r_ptr[3], r_ptr[2:0] + 1'b1};
+    else if (r_en == 1'b1 && !isEmpty) begin
+        if(&r_ptr[2:0])  r_ptr <= {~r_ptr[3], r_ptr[2:0] + 1'b1};
+        else r_ptr <= {r_ptr[3], r_ptr[2:0] + 1'b1};
+    end
     else r_ptr <= r_ptr;
 end
 
@@ -59,7 +62,13 @@ always @(posedge clk or negedge n_rst) begin
 end
 
 // Read
-
+always @(posedge clk or negedge n_rst) begin
+    if (r_en == 1'b1 && !isEmpty ) begin
+        r_data <= fifo[r_ptr];
+    end
+    else
+        r_data <= r_data;
+end
 
     
 endmodule

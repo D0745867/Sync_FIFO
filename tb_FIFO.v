@@ -48,7 +48,12 @@ initial begin
     repeat(3) @(negedge clk);  
         w_en = 1;
         w_data = 5;
-    # 100
+    repeat(10) @(negedge clk);
+        w_en = 0;
+        r_en = 1;
+    repeat(3) @(negedge clk);
+        r_en = 0;
+    # 1000
     $finish;
 end
 
